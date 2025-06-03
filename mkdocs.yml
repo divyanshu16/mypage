@@ -150,7 +150,7 @@ plugins:
 extra:
   analytics:
     provider: google
-    property: G-XXXXXXXXX
+    property: G-58FYGW7RT3
   social:
 #    - icon: fontawesome/solid/rss
 #      link: feed_rss_created.xml
@@ -164,7 +164,7 @@ extra:
 #  - stylesheets/extra.css
 extra_javascript:
   - javascripts/mathjax.js
-#  - javascripts/analytics.js
+  - javascripts/analytics.js
   - https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 copyright: Copyright &copy; 2025 Divyanshu Shekhar

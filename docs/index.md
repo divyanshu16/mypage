@@ -19,7 +19,7 @@ I’m a Machine Learning Engineer with 7+ years of experience building AI system
 
 ## About Me
 
-I specialize in taking AI products from concept to production. Whether it’s reinforcement learning for real-time ad bidding, multilingual generative models for customer service, or robust ML pipelines deployed across distributed systems — I’ve helped scale AI efforts that make a measurable impact.
+I specialize in taking AI products from concept to production. Whether it’s reinforcement learning for real-time ad bidding, multilingual generative models for customer service, or robust ML pipelines deployed across distributed systems — I’ve helped scale AI efforts that make a measurable impact, with products reaching revenue 5MM$ annually and [pending patent](https://patents.google.com/patent/US20230078872A1/).
 
 I enjoy working across the full stack of machine learning: from data engineering and modeling to deployment, monitoring, and iteration — always with a product mindset.
 

@@ -40,6 +40,24 @@ if [ ! -f "$HOME/.zshrc" ]; then
   touch "$HOME/.zshrc"
 fi
 
+# Fix insecure directory permissions BEFORE setting up completions
+echo "🔧 Fixing permissions on insecure directories..."
+for dir in $(compaudit 2>/dev/null); do
+  echo "Fixing: $dir"
+  chmod g-w,o-w "$dir"
+done
+
+# Also fix common Homebrew directories
+if [ -d "/opt/homebrew/share" ]; then
+  chmod -R g-w,o-w /opt/homebrew/share/zsh 2>/dev/null
+  chmod g-w,o-w /opt/homebrew/share 2>/dev/null
+fi
+
+if [ -d "/usr/local/share" ]; then
+  chmod -R g-w,o-w /usr/local/share/zsh 2>/dev/null
+  chmod g-w,o-w /usr/local/share 2>/dev/null
+fi
+
 # Append completions setup if not already present
 if ! grep -q "zsh-completions" "$HOME/.zshrc"; then
   cat << 'EOF' >> "$HOME/.zshrc"
@@ -49,15 +67,17 @@ if ! grep -q "zsh-completions" "$HOME/.zshrc"; then
 # -------------------------------
 
 # Add Homebrew zsh-completions to fpath
-fpath=($(brew --prefix)/share/zsh-completions $fpath)
+if type brew &>/dev/null; then
+  FPATH="$(brew --prefix)/share/zsh-completions:${FPATH}"
 
-# Load completions
-autoload -Uz compinit
-compinit
+  # Load completions
+  autoload -Uz compinit
+  compinit
 
-# Optional: Enable caching for faster startup
-zstyle ':completion::complete:*' use-cache on
-zstyle ':completion::complete:*' cache-path ~/.zsh/cache
+  # Optional: Enable caching for faster startup
+  zstyle ':completion::complete:*' use-cache on
+  zstyle ':completion::complete:*' cache-path ~/.zsh/cache
+fi
 
 # ----------------------------
 # Zsh History Configuration

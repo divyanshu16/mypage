@@ -1,14 +1,27 @@
 ---
+title: Divyanshu Shekhar - Machine Learning Engineer & AI Systems Architect
+description: ML Engineer with 7+ years building production AI systems for Fortune 500 companies. Specializing in generative models, reinforcement learning, ML infrastructure, and AI product development from concept to scale.
+keywords:
+- Machine Learning Engineer
+- AI Systems
+- Generative Models
+- ML Infrastructure
+- Data Engineering
+- Reinforcement Learning
+- AI Product Development
+- Fortune 500 AI Solutions
 categories:
 - Software Engineering
-description: Experienced ML Engineer specializing in AI product development, deployment,
-  and scaling for Fortune 500 companies.
 tags:
 - Machine Learning
 - AI Systems
 - Generative Models
 - ML Infrastructure
 - Data Engineering
+og_title: Divyanshu Shekhar - ML Engineer & AI Systems Expert
+og_description: 7+ years building production AI systems for Fortune 500 companies. Expert in generative models, ML infrastructure, and scaling AI products.
+og_image: https://www.divyanshus.com/assets/profile.jpg
+canonical_url: https://www.divyanshus.com/
 ---
 
 # Divyanshu Shekhar

@@ -1,5 +1,6 @@
 site_name: Divyanshu Shekhar
 site_author: Divyanshu Shekhar
+site_description: ML Engineer with 7+ years building AI systems for Fortune 500 companies. Expert in generative models, ML infrastructure, and AI product development.
 #repo_name: blog
 #repo_url: https://github.com/<xyz>/<pqr>/
 site_url: https://www.divyanshus.com/
@@ -168,6 +169,7 @@ extra:
 extra_javascript:
   - javascripts/mathjax.js
   - javascripts/analytics.js
+  - javascripts/schema.js
   - https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 copyright: Copyright &copy; 2025 Divyanshu Shekhar

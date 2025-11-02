@@ -7,6 +7,7 @@ site_url: https://www.divyanshus.com/
 edit_uri: http://edit/main/docs/
 theme:
   name: material
+  custom_dir: overrides
   icon:
     repo: fontawesome/brands/github
     edit: material/pencil 
@@ -128,7 +129,7 @@ nav:
     - RAG: 'writing/rag.md'
     - Mac Setup Guide: 'writing/mac-setup.md'
 plugins:
-  - social
+#  - social
   - rss:
       match_path: "writing/posts/.*"
 #      skip_ci_warning: true
@@ -170,6 +171,7 @@ extra_javascript:
   - javascripts/mathjax.js
   - javascripts/analytics.js
   - javascripts/schema.js
+  - javascripts/fb-tracking.js
   - https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 copyright: Copyright &copy; 2025 Divyanshu Shekhar

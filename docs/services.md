@@ -18,7 +18,7 @@ canonical_url: https://www.divyanshus.com/services/
 
 # What I Build For You
 
-[:material-calendar: Book a Free 30-min Call](https://calendar.app.google/H8NAcrLye37QQarw7){ .md-button .md-button--primary target="_blank" }
+[:material-calendar: Book a Free 30-min Call](https://calendar.app.google/hpWXbSN4HfuSRyvXA){ .md-button .md-button--primary target="_blank" }
 
 ---
 
@@ -124,6 +124,6 @@ We define these together upfront. Clear, measurable, no ambiguity.
 
 ## Book Your Discovery Call
 
-[:material-calendar: Book a Free 30-min Call](https://calendar.app.google/H8NAcrLye37QQarw7){ .md-button .md-button--primary target="_blank" }
+[:material-calendar: Book a Free 30-min Call](https://calendar.app.google/hpWXbSN4HfuSRyvXA){ .md-button .md-button--primary target="_blank" }
 
 Or [email me directly](mailto:divyanshu@divyanshus.com) 

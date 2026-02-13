@@ -27,7 +27,7 @@ canonical_url: https://www.divyanshus.com/contact/
 
 Free 30-min discovery call to understand your problem. I'll be honest if AI isn't the right solution.
 
-[:material-calendar: Book a Call](https://calendar.app.google/H8NAcrLye37QQarw7){ .md-button .md-button--primary target="_blank" }
+[:material-calendar: Book a Call](https://calendar.app.google/hpWXbSN4HfuSRyvXA){ .md-button .md-button--primary target="_blank" }
 
 ---
 

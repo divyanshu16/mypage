@@ -28,7 +28,7 @@ canonical_url: https://www.divyanshus.com/
 
 **I build AI systems that deliver measurable results. If we don't hit the agreed outcomes, you don't pay the performance fee.**
 
-[:material-calendar: Book a Free 30-min Call](https://calendar.app.google/H8NAcrLye37QQarw7){ .md-button .md-button--primary target="_blank" }
+[:material-calendar: Book a Free 30-min Call](https://calendar.app.google/hpWXbSN4HfuSRyvXA){ .md-button .md-button--primary target="_blank" }
 
 ---
 
@@ -79,4 +79,4 @@ GTIN mapping across 80 retailers for Samsung, L'Oreal
 
 If you have manual processes eating up your team's time, or you're exploring where AI can actually help your business, let's have a conversation.
 
-[:material-calendar: Book a Free 30-min Call](https://calendar.app.google/H8NAcrLye37QQarw7){ .md-button .md-button--primary target="_blank" }
+[:material-calendar: Book a Free 30-min Call](https://calendar.app.google/hpWXbSN4HfuSRyvXA){ .md-button .md-button--primary target="_blank" }

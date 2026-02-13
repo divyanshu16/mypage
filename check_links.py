@@ -41,6 +41,9 @@ def main():
         if link.startswith(('http://', 'https://')):
             print(f"Skipping external link: {link}")
             continue
+        if link.startswith('mailto:'):
+            print(f"Skipping mailto link: {link}")
+            continue
         
         # Construct the absolute path to the linked file
         linked_file_path = docs_dir / link

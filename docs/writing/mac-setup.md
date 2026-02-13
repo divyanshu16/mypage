@@ -1,6 +1,5 @@
 # Mac Setup Guide
 
-
 ## Complete Setup Script
 
 Save this as `setup.sh` and run with `zsh setup.sh`:

@@ -122,7 +122,7 @@ nav:
   - Home:
     - About: 'index.md'
     - Contact: 'contact.md'
-  - Book A Call:
+  - Services:
       - services.md
   - Writing:
     - Project Management: 'writing/project-management.md'

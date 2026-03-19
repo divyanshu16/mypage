@@ -31,22 +31,22 @@ def main():
         links = extract_links_from_file(file_path)
         if links:
             print(f"\nLinks found in {file_path}:")
-            all_links.extend(links)
+            all_links.extend((link, file_path) for link in links)
             for link in links:
                 print(f"  {link}")
 
     print("\nVerifying links...")
     broken_links = []
-    for link in all_links:
+    for link, source_file in all_links:
         if link.startswith(('http://', 'https://')):
             print(f"Skipping external link: {link}")
             continue
         if link.startswith('mailto:'):
             print(f"Skipping mailto link: {link}")
             continue
-        
-        # Construct the absolute path to the linked file
-        linked_file_path = docs_dir / link
+
+        # Resolve relative links against the source file's directory
+        linked_file_path = source_file.parent / link
 
         # Check if the file exists
         if not linked_file_path.exists():

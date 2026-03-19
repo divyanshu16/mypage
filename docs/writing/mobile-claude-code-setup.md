@@ -131,6 +131,10 @@ adduser claude --disabled-password --gecos ""
 # Give the user sudo privileges (for installing packages later)
 usermod -aG sudo claude
 
+# Allow passwordless sudo (needed since we didn't set a password)
+echo "claude ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers.d/claude
+chmod 440 /etc/sudoers.d/claude
+
 # Copy root's SSH keys so you can SSH in as this new user
 cp -r ~/.ssh /home/claude/.ssh
 
@@ -167,7 +171,28 @@ ssh claude-dev "sudo fallocate -l 2G /swapfile && sudo chmod 600 /swapfile && su
 
 This gives you 2GB of virtual memory. Not as fast as real RAM but keeps things stable.
 
-## Step 7: Start Coding with tmux
+## Step 7: Set Up Termius on Your Phone (Code From Anywhere)
+
+1. Download **Termius** from App Store / Play Store
+2. Go to **Keychain** → **Keys** → tap **+** → **Import**
+3. Paste your **private key** (the one starting with `-----BEGIN OPENSSH PRIVATE KEY-----`)
+
+   To get it on your phone, on your Mac run:
+   ```bash
+   cat ~/.ssh/id_ed25519_claude_vps
+   ```
+   Then AirDrop the text, or copy-paste via a secure method.
+
+   > **Gotcha:** Do NOT paste the public key here. Termius needs the **private** key. If you see `ssh-ed25519 AAAA...` that's the wrong one. You need `-----BEGIN OPENSSH PRIVATE KEY-----`.
+
+4. Go to **Hosts** → tap **+**:
+   - **Label:** `claude-dev`
+   - **Hostname:** `<your-droplet-ip>`
+   - **Username:** `claude`
+   - **Key:** Select the key you just imported
+5. **Save** → tap the host to connect
+
+## Step 8: Start Coding with tmux
 
 tmux keeps your session alive even when you disconnect (phone loses signal, close the app, etc.).
 
@@ -199,27 +224,67 @@ Your session is exactly where you left it.
 | Switch windows | `Ctrl+B` then `0-9` |
 | Scroll up | `Ctrl+B` then `[` (press `q` to exit scroll) |
 
-## Step 8: Set Up Termius on Your Phone (Code From Anywhere)
+---
 
-1. Download **Termius** from App Store / Play Store
-2. Go to **Keychain** → **Keys** → tap **+** → **Import**
-3. Paste your **private key** (the one starting with `-----BEGIN OPENSSH PRIVATE KEY-----`)
+## Step 9 (Optional): Lock Down SSH with Tailscale
 
-   To get it on your phone, on your Mac run:
-   ```bash
-   cat ~/.ssh/id_ed25519_claude_vps
-   ```
-   Then AirDrop the text, or copy-paste via a secure method.
+Right now your server's SSH port (22) is open to the entire internet. Anyone can try to connect to your IP on port 22. You're protected by SSH keys, so it's hard to break in — but the port is still visible and exposed to brute-force attempts.
 
-   > **Gotcha:** Do NOT paste the public key here. Termius needs the **private** key. If you see `ssh-ed25519 AAAA...` that's the wrong one. You need `-----BEGIN OPENSSH PRIVATE KEY-----`.
+**Tailscale** creates a private VPN mesh between your devices. Once set up, your server gets a private IP (like `100.x.x.x`) that only your devices can reach. You can then close port 22 on the public firewall entirely — no one on the internet can even *see* your SSH port.
 
-4. Go to **Hosts** → tap **+**:
-   - **Label:** `claude-dev`
-   - **Hostname:** `<your-droplet-ip>`
-   - **Username:** `claude`
-   - **Key:** Select the key you just imported
-5. **Save** → tap the host to connect
-6. Run `tmux attach -t claude` to pick up where you left off
+Think of it like this:
+
+- **Without Tailscale:** Your server's front door is on a public street. It's locked (SSH keys), but anyone can walk up and try the handle.
+- **With Tailscale:** Your server's front door is inside a private building that only your devices have a keycard to enter.
+
+### On your server:
+
+```bash
+# Install Tailscale
+curl -fsSL https://tailscale.com/install.sh | sh
+
+# Start and authenticate — it'll print a URL, open it in your browser
+sudo tailscale up
+
+# Note your server's Tailscale IP
+tailscale ip -4
+# e.g., 100.92.45.13
+```
+
+### On your Mac:
+
+Install the **Tailscale app from the Mac App Store** (search "Tailscale"). Sign in with the same account.
+
+### On your phone:
+
+Install the **Tailscale app** from App Store / Play Store. Sign in with the same account.
+
+### Update your SSH config:
+
+Replace the public IP with your server's Tailscale IP:
+
+```
+Host claude-dev
+    HostName <your-tailscale-ip>
+    User claude
+    IdentityFile ~/.ssh/id_ed25519_claude_vps
+```
+
+Also update the **Hostname** in your Termius host to the Tailscale IP.
+
+### Block public SSH access (optional):
+
+Once everything works through Tailscale, lock down the firewall:
+
+1. Go to DigitalOcean → **Networking** → **Firewalls** → **Create Firewall**
+2. **Name:** `claude-dev-firewall`
+3. **Inbound Rules:** Delete the default SSH rule, then add:
+   - **Type:** Custom, **Protocol:** TCP, **Port range:** All Ports, **Sources:** `100.64.0.0/10` (Tailscale IP range)
+4. **Outbound Rules:** Leave defaults (allow all)
+5. **Apply to Droplets:** Select `claude-dev`
+6. **Create Firewall**
+
+Now only your Tailscale devices can reach the server. If you ever get locked out, just remove the firewall from the DigitalOcean dashboard.
 
 ---
 
@@ -227,7 +292,6 @@ Your session is exactly where you left it.
 
 - **Never share your private key.** If you emailed it to yourself to get it on your phone, delete that email.
 - **Disable password auth** on your server (it's off by default on DigitalOcean if you chose SSH key auth).
-- **Consider Tailscale** if you want to avoid exposing SSH to the public internet. It creates a private network between your devices.
 - **Consider Mosh** instead of SSH for mobile — it handles flaky connections and network switches (Wi-Fi to 5G) much better than SSH.
 
 ## Cost

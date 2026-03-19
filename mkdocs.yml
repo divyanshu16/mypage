@@ -125,10 +125,8 @@ nav:
   - Services:
       - services.md
   - Writing:
-    - Project Management: 'writing/project-management.md'
-    - RAG: 'writing/rag.md'
-    - Mac Setup Guide: 'writing/mac-setup.md'
     - Mobile Claude Code Setup: 'writing/mobile-claude-code-setup.md'
+    - Mac Setup Guide: 'writing/mac-setup.md'
 plugins:
 #  - social
   - rss:

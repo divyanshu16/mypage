@@ -128,6 +128,7 @@ nav:
     - Project Management: 'writing/project-management.md'
     - RAG: 'writing/rag.md'
     - Mac Setup Guide: 'writing/mac-setup.md'
+    - Mobile Claude Code Setup: 'writing/mobile-claude-code-setup.md'
 plugins:
 #  - social
   - rss:

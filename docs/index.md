@@ -49,14 +49,14 @@ I'm not looking for a job. I'm not an agency where you get handed off to someone
 ## What I've Actually Built
 
 ### Smart Bidding System (Sprinklr)
-AI-powered ad bidding across Facebook, Instagram, LinkedIn
+AI-powered ad bidding across Facebook, Instagram, LinkedIn — used by Diageo, Booking[dot]com, AWS & more
 
 - **Result**: 37% increase in lead volume, 19% reduction in cost per lead
 - **Impact**: $5M+ annual revenue, pending US patent (US20230078872A1)
 - **How**: Reinforcement learning algorithm that dynamically optimizes bids in real-time
 
 ### Smart Reply & Compose
-Multilingual AI for customer care agents (French, Arabic, German)
+Multilingual AI for customer care agents (French, Arabic, German) — used by Samsung, Telefónica & more
 
 - **Result**: Faster response times, consistent quality across languages
 - **How**: Custom MT5 encoder-decoder models, production ETL pipelines

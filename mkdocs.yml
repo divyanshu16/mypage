@@ -125,6 +125,7 @@ nav:
   - Services:
       - services.md
   - Writing:
+    - Blog: 'writing/index.md'
     - Mobile Claude Code Setup: 'writing/mobile-claude-code-setup.md'
     - Mac Setup Guide: 'writing/mac-setup.md'
 plugins:

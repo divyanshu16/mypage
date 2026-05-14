@@ -3,3 +3,5 @@ site/
 docs/writing/private
 .env
 .rough
+.idea/
+__pycache__/

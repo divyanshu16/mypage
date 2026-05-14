@@ -107,7 +107,6 @@ Production-ready system with documentation. I don't disappear after handoff.
 
 - "We need AI for our pitch deck"
 - No clear problem to solve
-- Need someone to manage, not execute
 
 ---
 

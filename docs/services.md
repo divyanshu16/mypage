@@ -1,36 +1,60 @@
 ---
-title: AI & ML Services - Custom AI Agents & Process Automation
-description: I build custom AI agents and process automation that deliver measurable results. Outcome-based pricing - if we don't hit agreed KPIs, you don't pay the performance fee.
+title: AI Services - AI Audit & Implementation | Divyanshu Shekhar
+description: I help companies identify where AI creates real value, then build and ship it. AI Audit to find the right opportunities. AI Implementation to deliver working systems.
 keywords:
 - AI Consulting
+- AI Audit
+- AI Implementation
 - Custom AI Agents
 - Process Automation
 - Machine Learning Consulting
-- AI Implementation
 - ML Systems
 - Outcome-Based Pricing
 - AI Strategy
-og_title: AI & ML Services | Divyanshu Shekhar
-og_description: Custom AI agents and automation with outcome-based pricing. If we don't hit agreed results, you don't pay the performance fee.
-og_image: https://www.divyanshus.com/assets/services.jpg
+og_title: AI Services | Divyanshu Shekhar
+og_description: AI Audit to find the right opportunities. AI Implementation to ship working systems. Outcome-based pricing — if we don't hit agreed results, you don't pay the performance fee.
 canonical_url: https://www.divyanshus.com/services/
 ---
 
-# What I Build For You
+# What I Do For You
 
 [:material-calendar: Book a Free 30-min Call](https://calendar.app.google/hpWXbSN4HfuSRyvXA){ .md-button .md-button--primary target="_blank" }
 
 ---
 
-## 1. Custom AI Agents
+## 1. AI Audit
+
+**Not sure where AI fits in your business — or whether it's even worth it?**
+
+Most companies have more AI opportunity than they realize, and also more AI hype than they need. Before building anything, it helps to know what's actually worth building.
+
+In an AI Audit, I map your workflows, identify the highest-leverage opportunities, and give you a clear picture of what to do — and what not to do.
+
+**What you get:**
+
+- A prioritized list of AI opportunities specific to your business
+- Honest assessment of effort, cost, and expected impact for each
+- A recommendation on where to start — with reasoning
+
+This is the right starting point if you're new to AI, unsure where to invest, or have tried things that didn't stick.
+
+---
+
+## 2. AI Implementation
+
+**Know what you want to build? Let's ship it.**
+
+Once the opportunity is clear, I build it — production-ready, not a prototype that sits in a demo forever.
+
+### Custom AI Agents
 
 Your team spends hours triaging support tickets, qualifying leads, or pulling data from documents. An AI agent can handle that autonomously — routing requests, drafting responses, enriching records — while your people focus on work that actually needs a human.
 
-## 2. Process Automation with AI
+### Process Automation
 
 That manual workflow everyone hates? Document processing, report generation, data validation — I build pipelines that handle it end-to-end. You upload a file, the system does the rest.
 
-## 3. ML Systems (Consulting + Build)
+### ML Systems
 
 Sometimes you need a real model, not just an API call. Text classification, demand forecasting, route optimization, recommendation engines — I help identify where ML actually fits, then build and deploy it in production with proper monitoring.
 
@@ -42,48 +66,13 @@ Sometimes you need a real model, not just an API call. Text classification, dema
 30-min call to understand your problem. I'll be honest if AI isn't the right solution.
 
 ### Proposal
-Clear scope and pricing. You'll know exactly what you're getting.
+Clear scope and pricing. Fees are performance-based — the larger portion is tied to agreed outcomes, not hours billed.
 
 ### Build
 I ship working software, not slide decks. You see progress along the agreed timeline.
 
 ### Deliver
 Production-ready system with documentation. I don't disappear after handoff.
-
----
-
-## Pricing Model
-
-**Base Fee + Performance Bonus**
-
-- **Base fee**: Covers the effort and infrastructure costs
-- **Performance bonus**: The larger portion — tied to agreed outcomes
-
-If we don't hit the agreed KPIs, you don't pay the performance portion. You can walk away after base deliverables if results aren't tracking.
-
-**Why this works:**
-
-- Most of my fee is tied to your results
-- You're not locked in — if it's not working, you stop
-- I'm incentivized to deliver real outcomes, not bill hours
-
-**Flexible alternatives:**
-
-- Milestone-based: pay as we hit checkpoints
-- Pilot first: small paid proof-of-concept before full engagement
-
----
-
-## What I Can Tie Payment To
-
-| Outcome | Example |
-|---------|---------|
-| Time saved | "Reduce manual data entry from 10 hrs/week to 1 hr/week" |
-| Cost reduction | "Cut customer support costs by 30%" |
-| Working prototype | "Functional AI agent handling X workflow" |
-| Revenue/conversion | "Increase lead conversion by X%" |
-
-We define these together upfront. Clear, measurable, no ambiguity.
 
 ---
 
@@ -109,9 +98,9 @@ We define these together upfront. Clear, measurable, no ambiguity.
 
 **Good fit:**
 
+- Companies that want AI but don't know where to start
 - Tech companies with manual, repetitive processes
 - Teams that have tried automation but got stuck
-- Companies that want AI but don't know where to start
 - Scaling teams that need to do more without proportionally hiring
 
 **Not a fit:**
